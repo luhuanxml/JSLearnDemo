@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/*css语法：选择符 声明*/
+/**
+font-family:字体1,字体2 字体类型 英文字体放在前面，中文字体放在后面
+
+font-size 字体大小 200px 2em  默认情况下 1em=16px 但是em会收到父布局的影响
+
+color 颜色值
+说明：颜色值
+十六进制颜色取值模式 0 1 2 3 4 5 6 7 8 9 A B C D E F
+例如：#FFOOOO  两位两位 当两位为相同的时候可以缩写为#f00
+rgb颜色取值 0-255
+例如 color:rgb(0,205,150)
+rgba颜色取值 0-255 透明度取值0-1
+例如 color:rgba(0,205,150,0.6) 最后一个参数表示透明度
+
+font-weight:bolder;bold;nomal;100-900 一般500为常规 600-900加粗字体
+
+font-style 字体倾斜
+
+text-align 字体对齐 left/right/center/justify 默认left
+justify可以达到左右两端对齐的效果
+
+line-height 行高
+当该值设置为容器高度时，文本居中
+当该值设置为小于容器高度，文本偏上
+当该值设置为大于容器高度，文本偏下
+为单行文本时才有效果
+
+text-decoration
+text-decoration: none;去除线效果
+text-decoration: underline;下划线
+text-decoration: line-through;删除线(中划线)
+
+text-indent: 36px; 进缩
+**/
+
+div{
+    width: 300px;
+    height: 300px;
+    background: cornflowerblue;
+}
+
+h1{
+    color: crimson;
+    font-weight:normal;
+}
+
+#div01{
+    width: 100px;
+    height: 100px;
+    background: fuchsia;
+}
+
+#div02{
+    width: 100px;
+    height: 100px;
+    background: chocolate;
+}
+
+#div03{
+    width: 100px;
+    height: 100px;
+    background: aqua;
+}
+
+.redBox{
+    width: 50px;
+    height: 50px;
+    background-image: url(/image/image01.png);
+    margin-bottom: 5px;
+}
+
+.redBox span{
+    color: deeppink;
+}
+
+a:link{color: cornflowerblue}
+/*鼠标抬起移开颜色*/
+a:visited{color: aquamarine}
+/*鼠标移上去*/
+a:hover{color: azure}
+/*鼠标点击不松手*/
+a:active{color: crimson}
+
+#textdec {
+    /*text-decoration: none;*/ /*去除线效果*/
+    /*text-decoration: underline;*/ /*下划线*/
+    text-decoration: line-through;/*删除线(中划线)*/
+    text-indent: 36px;
+}

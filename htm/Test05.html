@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS学习</title>
+
+    <script src="../jscript/Test05.js"></script>
+</head>
+
+<body>
+<!--子域-->
+<iframe src="https://wwww.baidu.com"></iframe>
+
+<div id="div01"></div>
+
+<!--DOM学习-->
+<script type="text/javascript">
+    var div = document.getElementById("div01");
+    div.style.width = "200px";
+    div.style.height = "200px";
+    div.style.backgroundColor = "green";
+    var count = 0;
+    div.onclick = function () {
+        if (count % 2 === 0) {
+            div.style.backgroundColor = "red";
+        } else {
+            div.style.backgroundColor = "green";
+        }
+        count++;
+    };
+
+    var w=100;
+
+    var timer=setInterval(function test(){
+        div.style.width = ((w++)+"px");
+        if (div.style.width==="120px"){
+            clearInterval(timer)
+        }
+    },1000)
+</script>
+</body>
+</html>
