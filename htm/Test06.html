@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--JS事件-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<div id="element" style="width: 200px;height: 200px; background: blue">
+
+</div>
+
+<ul>
+    <li>a01</li>
+    <li>a02</li>
+    <li>a03</li>
+    <li>a04</li>
+
+</ul>
+
+<script type="text/javascript">
+    var element = document.getElementById("element");
+    element.addEventListener('click',function () {
+        console.log("点击")
+    },false);
+    //循环方式添加点击事件
+    // var lis =document.getElementsByTagName("li");
+    // for (let i = 0; i < lis.length; i++) {
+    //     lis[i].addEventListener('click',function () {
+    //         console.log(i);
+    //     },false);
+    // }
+    //委托方式添加点击事件
+    var ul = document.getElementsByTagName("ul")[0];
+    ul.onclick= function (event) {
+        //首先考虑兼容性
+        var e =event||window.event;
+        var target =e.target||e.srcElement;
+        console.log(target.innerText);
+    }
+
+</script>
+
+</body>
+</html>
